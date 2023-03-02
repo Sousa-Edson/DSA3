@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 07</title>
+</head>
+
+<body>
+    <!-- <p> Faça este código em Html, CSS e JavaScrip.
+         Todas as informações devem ser apresentadas no campo:
+          Saída
+    </p> -->
+<main>
+    <form action="">
+    <label for="nome">Nome completo</label>
+    <input type="text" id="txtNome">
+    <label for="idade">Informe a idade</label>
+    <input type="text" id="txtIdade">
+    <button type="button" name="btnEnviar" onclick="chamaConsulta()">Enviar informações</button>
+    <button type="reset" name="btnReset">Nova consulta</button>
+    <p id="resposta">...</p>
+</form>
+</main>
+
+    <script>
+         var hora = new Date().getHours();
+        var texto = "";
+        var textoStatus = "";
+        var textoResposta="";
+
+        var nome =document.getElementById("txtNome");
+         var idade = document.getElementById("txtIdade")
+         var resp = document.getElementById("resposta")
+         function chamaConsulta(){
+            if (nome.length != 0 && idade.length != 0) {
+           
+            statusIdade();
+           textoResposta = horaAtual()+" ! <b>" +`${ nome.value} ` + "</b> <br/> Você tem <b>" + `${idade.value}` + "</b> anos." + " <br/> Você é considerado " + textoStatus;
+           resp.innerHTML=textoResposta;
+           console.log(textoResposta)
+        } else {
+            alert("Preencha as informações,\nNão deixe em branco!")
+        }
+         }
+   
+        function horaAtual() {
+           
+            if (hora >= 0 && hora <= 11) {
+                texto = "Bom dia"
+            }
+            else if (hora >= 12 && hora <= 18) {
+                texto = "Boa tarde"
+            }
+            else if (hora >= 8 && hora <= 23) {
+                texto = "Boa noite"
+            }
+          return texto;
+           
+        }
+        function statusIdade() {
+            if (idade >= 0 && idade <= 9) {
+                textoStatus = "criança"
+            }
+            else if (idade >= 10 && idade <= 20) {
+                textoStatus = "jovem"
+            }
+            else if (idade >= 21 && idade <= 64) {
+                textoStatus = "adulto"
+            } else {
+                textoStatus = "idoso"
+            }
+console.log(idade)
+
+        }
+
+
+    </script>
+</body>
+
+</html>
