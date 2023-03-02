@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 04</title>
+</head>
+
+<body>
+    <p> Utilize o mesmo código do item 3 acima e faça as modificações:
+        Não permita que os campos (nome e idade) sejam aceitos em branco informando conforme abaixo com alert().
+
+    </p>
+
+    <script>
+        var nome
+        var idade
+        nome = prompt("Qual seu nome?");
+        idade = prompt("Qual sua idade?");
+        if (nome.length != 0 && idade.length != 0) {
+            alert("seu nome é " + nome + "\nsua idade é " + idade)
+            document.write("Boa tarde, <b>" + nome.toUpperCase() + "</b> <br> Você tem <b> " + idade + "</b> anos.")
+        } else {
+            alert("Preencha as informações,\nNão deixe em branco!")
+        }
+    </script>
+</body>
+
+</html>
+ 

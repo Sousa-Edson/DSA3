@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 05</title>
+</head>
+
+<body>
+    <p> Utilize o mesmo código do item 4 acima e faça as modificações.
+        Para verificar a hora utilize ➔ var hora = new Date().getHours();
+        Verificar o horário atual e conforme a regra abaixo apresentar:
+        a) Se a hora estiver entre 0hs até 11:59hs ➔ Bom dia!
+        b) Entre 12:00hs até 18hs ➔ Boa tarde!
+        c) Após 18hs ➔ Boa noite!
+
+    </p>
+
+    <script>
+        var hora = new Date().getHours();
+        var texto = "";
+        var nome = prompt("Qual seu nome?");
+        var idade = prompt("Qual sua idade?");
+        if (nome.length != 0 && idade.length != 0) {
+            horaAtual();
+           
+            document.write("Boa tarde! <b>" + nome.toUpperCase() + "</b> <br/> Você tem <b>" + idade + "</b> anos.")
+        } else {
+            alert("Preencha as informações,\nNão deixe em branco!")
+        }
+        function horaAtual(){
+        if (hora >= 0 && hora <= 11) { 
+            texto = "Bom dia" 
+        }
+        else if (hora >= 12 && hora <= 18) {
+            texto = "Boa tarde" 
+         }
+        else if (hora >= 8 && hora <= 23){
+            texto = "Boa noite" 
+        }
+        
+    }
+
+               
+    </script>
+</body>
+
+</html>
