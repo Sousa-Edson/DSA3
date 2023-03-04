@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>exercicio 07</title>
+    <script src="app.js" defer></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -13,71 +15,30 @@
          Todas as informações devem ser apresentadas no campo:
           Saída
     </p> -->
+   
     <main>
+        <h1>Exercicio de revisão</h1>
         <form action="">
-            <label for="nome">Nome completo</label>
-            <input type="text" id="txtNome"  >
-            <label for="idade">Informe a idade</label>
-            <input type="text" id="txtIdade"  >
-            <button type="button" name="btnEnviar" onclick="chamaConsulta()">Enviar informações</button>
-            <button type="reset" name="btnReset">Nova consulta</button>
+            <div>
+                <label for="nome">Nome completo</label>
+                <input type="text" id="txtNome">
+            </div>
+            <div>
+                <label for="idade">Informe a idade</label>
+                <input type="text" id="txtIdade">
+            </div>
+            <div>
+                <button type="button" name="btnEnviar" onclick="chamaConsulta()">Enviar informações</button>
+            </div>
+            <div>
+                <button type="reset" name="btnReset" onclick="limpar()">Nova consulta</button>
+            </div>
+
             <p id="resposta">...</p>
         </form>
     </main>
 
-    <script>
-        var hora = new Date().getHours();
-        var texto = "";
-        var textoStatus = "";
-        var textoResposta = "";
 
-        var nome = document.getElementById("txtNome");
-        var idade = document.getElementById("txtIdade")
-        var resp = document.getElementById("resposta")
-        function chamaConsulta() {
-            if (nome.length != 0 && idade.length != 0) {
-
-                statusIdade();
-                textoResposta = horaAtual() + " ! <b>" + nome.value + "</b> <br/> Você tem <b>" + idade.value + "</b> anos." + " <br/> Você é considerado " + textoStatus;
-                resp.innerHTML = textoResposta;
-                console.log(textoResposta)
-            } else {
-                alert("Preencha as informações,\nNão deixe em branco!")
-            }
-        }
-
-        function horaAtual() {
-
-            if (hora >= 0 && hora <= 11) {
-                texto = "Bom dia"
-            }
-            else if (hora >= 12 && hora <= 18) {
-                texto = "Boa tarde"
-            }
-            else if (hora >= 8 && hora <= 23) {
-                texto = "Boa noite"
-            }
-            return texto;
-
-        }
-        function statusIdade() {
-            if (idade.value >= 0 && idade.value <= 9) {
-                textoStatus = "criança"
-            }
-            else if (idade.value >= 10 && idade.value <= 20) {
-                textoStatus = "jovem"
-            }
-            else if (idade.value >= 21 && idade.value <= 64) {
-                textoStatus = "adulto"
-            } else {
-                textoStatus = "idoso"
-            }
-            console.log(idade.value)
-
-        }
-
-
-    </script>
 </body>
 
 </html>
