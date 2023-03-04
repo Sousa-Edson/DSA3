@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio II</title>
+    <script src="app.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Exercício II
+Desenvolva um aplicativo que solicite usuário e senha com perfil, a qual permita somente 3 tentativas conforme as
+regras de negócio abaixo:
+a) Autenticação
+• Não permita campos em branco; (Informar)
+• Ao digitar usuário ou senha incorretos informar:
+Usuário ou senha Inválidos!!!
+Falta(m) xxx Tentativa(s).
+Onde o xxx é a quantidade que faltam nas tentativas:
+o No primeiro erro informar: Falta(m) 2 Tentativa(s);
+o No segundo erro informar: Falta(m) 1 Tentativa(s);
+o Última tentativa informar: Sistema Bloqueado e desativar os componentes.
+b) Autorização
+• Após o Login verifique o perfil de acesso do usuário: Administrador, Gerente ou Analista e apresentar na tela:
+Bem vindo, {nome do usuário logado}, sua permissão de acesso é {perfil de acesso} -->
+    <main>
+        <div id="formulario">
+            <h1>Login</h1>
+            <div class="container">
+                <form id="" action="">
+                    <div>
+                        <label for="nome">Login</label>
+                        <br>
+                        <input type="text" id="txtLogin" value="user">
+                    </div>
+                    <div>
+                        <label for="idade">Senha</label>
+                        <br>
+                        <input type="password" id="txtSenha" value="1">
+                    </div>
+                    <div>
+                        <button type="button" id="btnEnviar" onclick="chamaConsulta()">Logar</button>
+                    </div>
+                    <p id="resposta"></p>
+                </form>
+            </div>
+        </div>
+        <div id="acesso">
+            <h1 id="titulo">Logado</h1>
+        </div>
+    </main>
+</body>
+
+</html>
