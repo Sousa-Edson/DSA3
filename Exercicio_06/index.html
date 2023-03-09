@@ -9,14 +9,14 @@
 </head>
 
 <body>
-    <p> Utilizando o mesmo código do item 5 acima faça as modificações.
+    <!-- <p> Utilizando o mesmo código do item 5 acima faça as modificações.
         Conforme as regras das idades abaixo apresente a informação.
         Caso idade entre 0 e 9 anos ➔ criança
         Caso idade entre 10 e 20 anos ➔ jovem
         Caso idade entre 21 e 64 anos ➔ adulto
         Acima de 65 ➔ idoso
 
-    </p>
+    </p> -->
 
     <script>
         var hora = new Date().getHours();
@@ -24,10 +24,12 @@
         var textoStatus = "";
         var nome = prompt("Qual seu nome?");
         var idade = prompt("Qual sua idade?");
-        if (nome.length != 0 && idade.length != 0) {
+        if (isNaN(idade)==true){ 
+            alert("Não é numero!")
+        }else  if (nome.length != 0 && idade.length != 0) {
             horaAtual();
             statusIdade();
-            document.write("Boa tarde! <b>" + nome.toUpperCase() + "</b> <br/> Você tem <b>" + idade + "</b> anos." + " <br/> Você é considerado "+textoStatus)
+            document.write(texto+"! <b>" + nome.toUpperCase() + "</b> <br/> Você tem <b>" + idade + "</b> anos." + " <br/> Você é considerado "+textoStatus)
         } else {
             alert("Preencha as informações,\nNão deixe em branco!")
         }

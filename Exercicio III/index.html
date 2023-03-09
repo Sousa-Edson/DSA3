@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio III</title>
+    <script src="app.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!--  
+Exercício III
+Relatório Nome e Sexo, desenvolva uma página que solicite a digitação de 10 nomes, a qual apresente relatório sendo que os mesmos deverão ser apresentados abaixo, seguem as regras do negócio:
+• Utilize array para guarda dos dados e para criação do relatório;
+• O nome e o sexo devem ser apresentados na tela abaixo (ver tela proposta) a cada inclusão;
+• Não permita campo em branco, informe “Não deixe em branco!!!”;
+• O botão de rádio para o sexo masculino deverá ficar marcado na abertura da página;
+✓ Dica ➔ Utilize o comando: btnRadio.checked=true;
+• O botão de Relatório deverá ficar desativado com a letra em branco dentro do botão (ver tela proposta);
+• A cada inclusão limpar o campo nome e incluir o foco no campo;
+• Após incluir o último nome seguir o procedimento:
+✓ O botão Incluir deverá ser desativado com a letra em branco dentro do botão (ver tela proposta);
+✓ O campo nome deverá ficar desativado;
+✓ O botão do relatório deverá ser ativado com a cor da letra padrão.
+• Ao clicar no Relatório apresentar todos os nomes conforme o botão de rádio:
+✓ Quando marcado com Feminino e
+✓ Outro quando marcado para Masculino.
+Seguem as telas propostas
+
+     -->
+    <main>
+        <div id="formulario">
+            <h1>Relatório - Nome e sexo</h1>
+            <div class="container">
+                <form id="" action="">
+                    <div>
+                        <label for="nome">Nome</label>
+                        <br>
+                        <input type="text" id="txtNome" value="Edson">
+                    </div>
+                    <div>
+                        <label for="sexo">Sexo</label>
+                        <br>
+                        <div class="button-group">
+                            <input type="radio" name="rbSexo" id="rbMasc" value="masculino">
+                            <label for="rbMasc">Masculino</label>
+                        </div>
+
+                        <div class="button-group">
+                            <input type="radio" name="rbSexo" id="rbFem" value="feminino">
+                            <label for="rbFem">Feminino</label>
+
+                        </div>
+
+                    </div>
+                    <div>
+                        <button type="button" id="btnIncluir" onclick="salvarPessoa()">Incluir</button>
+                        <button type="button" id="btnRelatorio" onclick="salvarPessoa()">Relatório</button>
+                    </div>
+                   
+                </form>
+            </div>
+        </div>
+        <hr>
+        <div id="lista">
+           ddd
+        </div>
+    </main>
+</body>
+
+</html>
